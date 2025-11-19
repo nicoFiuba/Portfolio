@@ -1,0 +1,109 @@
+/* src/components/Hero.css */
+.hero {
+  min-height: 90vh; /* Ocupa casi toda la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0a0a0a;
+  color: #e5e5e5;
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 3px solid #177006; /* Un toque sutil de tu verde abajo */
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.highlight {
+  color: #9E1500; /* Tu rojo oscuro favorito */
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #a3a3a3; /* Un gris más suave */
+  margin-bottom: 2rem;
+}
+
+.bio {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  color: #d4d4d4;
+}
+
+/* Botones */
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block; /* Importante para que respete padding */
+}
+
+.btn-primary {
+  background-color: #9E1500; /* Fondo Rojo */
+  color: white;
+  border: 2px solid #9E1500;
+}
+
+.btn-primary:hover {
+  background-color: #7a1000; /* Rojo más oscuro al pasar el mouse */
+  transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #e5e5e5;
+  border: 2px solid #177006; /* Borde Verde */
+}
+
+.btn-secondary:hover {
+  background-color: rgba(23, 112, 6, 0.1); /* Verde transparente suave */
+  border-color: #1f8f0a;
+}
+
+/* --- RESPONSIVE (CELULARES) --- */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 85vh;
+    padding: 3rem 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem; /* Texto más chico en celu */
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .bio {
+    font-size: 1rem;
+  }
+
+  .social-links {
+    flex-direction: column; /* Botones verticales */
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%; /* Botones anchos */
+    text-align: center;
+  }
+}

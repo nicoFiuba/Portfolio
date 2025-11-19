@@ -1,0 +1,52 @@
+/* src/components/Footer.css */
+.footer {
+    background-color: #0a0a0a;
+    /* Fondo negro */
+    color: #a3a3a3;
+    /* Texto gris suave */
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid #1f1f1f;
+    /* Una línea sutil arriba para separar */
+    margin-top: auto;
+    /* Esto asegura que el footer se vaya al fondo */
+    width: 100%;
+}
+
+.footer-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+/* Efecto Hover con tu Rojo */
+.footer-links a:hover {
+    color: #9e1500;
+    text-decoration: underline;
+}
+
+/* Ajuste para celulares */
+@media (min-width: 768px) {
+    .footer-contenido {
+        flex-direction: row;
+        /* En PC, ponemos el texto y los links en la misma línea */
+        justify-content: space-between;
+        padding: 0 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

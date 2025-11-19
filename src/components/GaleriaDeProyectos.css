@@ -1,0 +1,63 @@
+/* src/components/GaleriaDeProyectos.css */
+.seccion-proyectos {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #1f1f1f;
+    /* Gris oscuro */
+}
+
+.seccion-proyectos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #e5e5e5;
+}
+
+/* El contenedor de la galería (Grid) */
+.galeria-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-proyecto {
+    background-color: #0a0a0a;
+    /* Fondo negro */
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    cursor: default;
+}
+
+/* Efecto Hover */
+.tarjeta-proyecto:hover {
+    transform: translateY(-5px);
+    border-color: #177006;
+    /* Tu verde */
+}
+
+.tarjeta-proyecto h3 {
+    color: #e5e5e5;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta-proyecto p {
+    color: #a3a3a3;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.etiqueta-estado {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background-color: rgba(158, 21, 0, 0.2);
+    color: #ff4d4d;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: 1px solid rgba(158, 21, 0, 0.5);
+}
