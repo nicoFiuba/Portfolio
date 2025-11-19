@@ -1,0 +1,67 @@
+/* src/components/Navbar.css */
+.navbar {
+    position: fixed;
+    /* Se queda pegada arriba */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 4rem;
+    /* Espaciado interno */
+
+    /* Magia visual: Fondo negro transparente y borroso */
+    background-color: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+    /* Asegura que esté siempre encima de todo */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-logo {
+    font-family: "Chakra Petch", sans-serif;
+    /* Tu fuente de títulos */
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e5e5e5;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navbar-links a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #9e1500;
+    /* Rojo al pasar el mouse */
+}
+
+/* Ajuste para celular: Ocultamos el menú o lo achicamos */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        justify-content: center;
+        /* Centramos todo */
+    }
+
+    .navbar-logo {
+        display: none;
+        /* Ocultamos el logo en celu para que entren los links */
+    }
+
+    .navbar-links {
+        gap: 1.5rem;
+        font-size: 0.9rem;
+    }
+}

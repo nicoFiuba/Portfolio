@@ -1,19 +1,43 @@
 /* src/index.css - Reseteo global */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #0a0a0a; /* Tu negro de fondo base */
-  font-family: system-ui, -apple-system, sans-serif;
-  overflow-x: hidden; /* Evita el scroll horizontal indeseado */
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: #0a0a0a;
+    /* Tu negro de fondo base */
+    font-family: system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    /* Evita el scroll horizontal indeseado */
+
+
+    /* Agregamos el degradado sutil inspirado en Brittany Chiang / Tema Oscuro */
+    background: radial-gradient(circle at 50% 0%, #1a0500 0%, #0a0a0a 70%);
+
+    color: #e5e5e5;
+
+    /* FUENTE PRINCIPAL (Texto corrido) */
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth; /* Deslizamiento suave */
+}
+
+/* FUENTE DE TÍTULOS (Nombre, Secciones) */
+h1, h2, h3, .btn {
+    font-family: 'Chakra Petch', sans-serif;
+    letter-spacing: 0.5px;
+    /* Un poquito de aire para que se vea pro */
 }
 
 #root {
-  width: 100%;
-  display: block;
+    width: 100%;
+    display: block;
 }

@@ -24,7 +24,7 @@ function GaleriaDeProyectos() {
     ];
 
     return (
-        <section className="seccion-proyectos">
+        <section className="seccion-proyectos" id="proyectos">
             <h2>Mis Proyectos</h2>
             <div className="galeria-contenedor">
 
