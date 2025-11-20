@@ -1,5 +1,5 @@
 import './Hero.css';
-import { FaLinkedin, FaFileDownload } from 'react-icons/fa'; // <--- Agregamos ícono de descarga
+import { FaLinkedin, FaFileDownload } from 'react-icons/fa';
 import fotoPerfil from '../assets/perfil.jpg';
 
 function Hero() {
@@ -7,16 +7,21 @@ function Hero() {
         <section className="hero" id="inicio">
             <div className="hero-content">
 
+                {/* Columna Texto */}
                 <div className="hero-text">
                     <h1>Nicolás <span className="highlight">Feldman</span></h1>
-                    <h2>Director Técnico de Fútbol y estudiante de Ingeniería Informática</h2>
+                    <h2>Director Técnico de Fútbol y futuro Ingeniero Informático</h2>
+
+                    {/* --- BIO LIMPIA (Sin negritas) --- */}
                     <p className="bio">
-                        Uniendo la pasión por la táctica con la potencia de los datos.
-                        Estudiante de Ingeniería en Informática (UBA) y DT con Licencia A.
+                        DT con Licencia A y futuro Ingeniero Informático (UBA).
+                        <br />
+                        Mi objetivo es profesionalizar el fútbol a través de la tecnología,
+                        uniendo la visión táctica del campo con la precisión del código.
                     </p>
+                    {/* -------------------------------- */}
 
                     <div className="social-links">
-                        {/* Botón CV (Rojo - Principal) */}
                         <a
                             href="/CV_Feldman.pdf"
                             download="CV_Nicolas Feldman.pdf"
@@ -26,7 +31,6 @@ function Hero() {
                             Descargar CV
                         </a>
 
-                        {/* Botón LinkedIn (Borde Verde - Secundario) */}
                         <a
                             href="https://www.linkedin.com/in/nicol%C3%A1s-feldman/"
                             target="_blank"
@@ -39,6 +43,7 @@ function Hero() {
                     </div>
                 </div>
 
+                {/* Columna Foto */}
                 <div className="hero-image-container">
                     <img src={fotoPerfil} alt="Nicolás Feldman" className="hero-img" />
                 </div>

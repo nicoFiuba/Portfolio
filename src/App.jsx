@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Habilidades from './components/Habilidades'
+import Trayectoria from './components/Trayectoria'
 import GaleriaDeProyectos from './components/GaleriaDeProyectos'
 import Footer from './components/Footer'
 
@@ -13,6 +14,7 @@ function App() {
     <Navbar />
     <Hero />
     <Habilidades />
+    <Trayectoria />
     <GaleriaDeProyectos />
     <Footer />
   </div>

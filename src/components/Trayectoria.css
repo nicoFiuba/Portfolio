@@ -1,0 +1,94 @@
+/* src/components/Trayectoria.css */
+.seccion-trayectoria {
+    padding: 4rem 2rem;
+    background-color: #0a0a0a;
+    /* Fondo negro para continuidad */
+    color: #e5e5e5;
+}
+
+.contenedor-trayectoria {
+    max-width: 800px;
+    /* Un poco más angosto para que se lea bien */
+    margin: 0 auto;
+}
+
+.seccion-trayectoria h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    color: #e5e5e5;
+}
+
+/* --- LA LÍNEA DE TIEMPO --- */
+.timeline {
+    position: relative;
+    border-left: 3px solid #1f1f1f;
+    /* La línea vertical gris */
+    margin-left: 20px;
+    /* Espacio para que entre la línea */
+    padding-left: 30px;
+}
+
+.timeline-item {
+    margin-bottom: 3rem;
+    /* Espacio entre eventos */
+    position: relative;
+}
+
+/* El punto verde */
+.timeline-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #177006;
+    /* Tu Verde */
+    border-radius: 50%;
+    left: -39px;
+    /* Ajuste matemático para que quede centrado en la línea */
+    top: 5px;
+    border: 3px solid #0a0a0a;
+    /* Borde negro para separarlo de la línea */
+    box-shadow: 0 0 10px rgba(23, 112, 6, 0.5);
+    /* Brillo */
+}
+
+.timeline-date {
+    font-family: 'Chakra Petch', sans-serif;
+    color: #9E1500;
+    /* Tu Rojo para las fechas */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+    color: #e5e5e5;
+}
+
+.timeline-content h4 {
+    font-size: 1rem;
+    color: #a3a3a3;
+    /* Gris claro para la institución */
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+    font-style: italic;
+}
+
+.timeline-content p {
+    color: #d4d4d4;
+    line-height: 1.6;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    /* Cajita sutil */
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #1f1f1f;
+    transition: border-color 0.3s ease;
+}
+
+.timeline-content p:hover {
+    border-color: #333;
+}

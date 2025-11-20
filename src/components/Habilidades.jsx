@@ -8,7 +8,7 @@ function Habilidades() {
         },
         {
             titulo: 'Ingeniería & Datos', // con tilde
-            items: ['Python', 'Java', 'SQL', 'Git & GitHub', 'C/C++', 'Algoritmos']
+            items: ['Python', 'Java', 'SQL', 'Git & GitHub', 'C/C++']
         },
         {
             titulo: 'Soft Skills & Fútbol', // con tildes

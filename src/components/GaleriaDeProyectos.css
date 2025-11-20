@@ -61,3 +61,20 @@
     font-weight: bold;
     border: 1px solid rgba(158, 21, 0, 0.5);
 }
+
+.tags-tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    /* Espacio antes del estado "Próximamente" */
+}
+
+.tag-tech {
+    font-size: 0.75rem;
+    color: #a3a3a3;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+}
