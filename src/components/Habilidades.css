@@ -1,0 +1,119 @@
+/* src/components/Habilidades.css */
+
+/* --- SECCIÓN PRINCIPAL --- */
+.seccion-habilidades {
+    padding: 4rem 2rem;
+    background-color: #0d0d0d;
+    /* Un negro apenas más claro para separar del fondo principal */
+    text-align: center;
+    border-top: 1px solid #1f1f1f;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.contenedor-habilidades {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.seccion-habilidades h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #e5e5e5;
+    font-family: 'Chakra Petch', sans-serif;
+    /* Tu fuente tecnológica */
+}
+
+/* --- GRILLA DE 3 COLUMNAS --- */
+.grid-habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Columnas automáticas */
+    gap: 2rem;
+}
+
+/* --- TARJETAS DE CATEGORÍA --- */
+.grupo-habilidad {
+    background-color: rgba(255, 255, 255, 0.03);
+    /* Fondo casi transparente */
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    text-align: left;
+    height: 100%;
+    /* Para que todas tengan la misma altura */
+}
+
+.grupo-habilidad:hover {
+    border-color: #9E1500;
+    /* Tu Rojo al pasar el mouse por la caja */
+    transform: translateY(-5px);
+}
+
+.grupo-habilidad h3 {
+    color: #e5e5e5;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-family: 'Chakra Petch', sans-serif;
+    border-bottom: 2px solid #177006;
+    /* Subrayado verde táctico */
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+/* --- CONTENEDOR DE BADGES --- */
+.lista-badges {
+    display: flex;
+    flex-wrap: wrap;
+    /* Si no entran, bajan a la siguiente línea */
+    gap: 0.8rem;
+}
+
+/* --- ESTILO DE LAS ETIQUETAS (BADGES) --- */
+.badge {
+    background-color: #1a1a1a;
+    color: #ccc;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    /* Bordes bien redondos estilo pastilla */
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #333;
+    transition: all 0.2s ease;
+    cursor: default;
+    font-family: 'Inter', sans-serif;
+    /* Fuente legible */
+}
+
+/* Efecto Hover en cada etiqueta individual */
+.badge:hover {
+    border-color: #177006;
+    /* Tu Verde */
+    color: #fff;
+    background-color: rgba(23, 112, 6, 0.1);
+    /* Fondo verde muy suave */
+    transform: scale(1.05);
+    /* Se agranda un poquito */
+}
+
+/* --- AJUSTES PARA CELULARES --- */
+@media (max-width: 768px) {
+    .grupo-habilidad {
+        text-align: center;
+        /* En celu centramos todo */
+    }
+
+    .grupo-habilidad h3 {
+        display: block;
+        /* Que ocupe todo el ancho */
+        border-bottom: none;
+        /* Sacamos la línea en celular si queda rara */
+        text-decoration: underline;
+        text-decoration-color: #177006;
+        text-underline-offset: 8px;
+    }
+
+    .lista-badges {
+        justify-content: center;
+    }
+}

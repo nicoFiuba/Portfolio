@@ -1,109 +1,167 @@
 /* src/components/Hero.css */
 .hero {
-  min-height: 90vh; /* Ocupa casi toda la pantalla */
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #0a0a0a;
   color: #e5e5e5;
-  text-align: center;
   padding: 2rem;
-  border-bottom: 3px solid #177006; /* Un toque sutil de tu verde abajo */
+  border-bottom: 3px solid #177006;
+  /* Tu borde verde táctico */
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  /* Espacio entre texto y foto */
+  text-align: left;
+}
+
+.hero-text {
+  flex: 1;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin-bottom: 0.5rem;
   line-height: 1.1;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 .highlight {
-  color: #9E1500; /* Tu rojo oscuro favorito */
+  color: #9E1500;
+  /* Tu Rojo */
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  color: #a3a3a3; /* Un gris más suave */
-  margin-bottom: 2rem;
+  color: #a3a3a3;
+  margin-bottom: 1.5rem;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 .bio {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: #d4d4d4;
+  max-width: 600px;
 }
 
-/* Botones */
+/* --- ESTILO DE LA FOTO --- */
+.hero-image-container {
+  flex-shrink: 0;
+}
+
+.hero-img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #177006;
+  /* Marco Verde */
+  box-shadow: 0 0 20px rgba(23, 112, 6, 0.3);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.05);
+  border-color: #9E1500;
+  /* Rojo al pasar el mouse */
+}
+
+/* --- BOTONES --- */
 .social-links {
   display: flex;
-  gap: 1.5rem;
-  justify-content: center;
+  gap: 1rem;
+  /* Espacio entre los dos botones */
+  flex-wrap: wrap;
+  /* Por si la pantalla es muy chica, que bajen */
 }
 
 .btn {
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  display: inline-block; /* Importante para que respete padding */
+
+  /* Alineación perfecta de ícono y texto */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 1rem;
 }
 
+/* Botón Primario (Descargar CV) - Rojo */
 .btn-primary {
-  background-color: #9E1500; /* Fondo Rojo */
+  background-color: #9E1500;
   color: white;
   border: 2px solid #9E1500;
 }
 
 .btn-primary:hover {
-  background-color: #7a1000; /* Rojo más oscuro al pasar el mouse */
-  transform: translateY(-2px); /* Efecto de elevación */
+  background-color: #7a1000;
+  border-color: #7a1000;
+  transform: translateY(-2px);
 }
 
+/* Botón Secundario (LinkedIn) - Transparente con borde Verde */
 .btn-secondary {
   background-color: transparent;
   color: #e5e5e5;
-  border: 2px solid #177006; /* Borde Verde */
+  border: 2px solid #177006;
 }
 
 .btn-secondary:hover {
-  background-color: rgba(23, 112, 6, 0.1); /* Verde transparente suave */
+  background-color: rgba(23, 112, 6, 0.1);
   border-color: #1f8f0a;
+  transform: translateY(-2px);
 }
 
 /* --- RESPONSIVE (CELULARES) --- */
-@media (max-width: 768px) {
-  .hero {
-    min-height: 85vh;
-    padding: 3rem 1rem;
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    /* Texto abajo, Foto arriba */
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 
   h1 {
-    font-size: 2.5rem; /* Texto más chico en celu */
+    font-size: 2.5rem;
   }
 
   h2 {
     font-size: 1.2rem;
   }
 
-  .bio {
-    font-size: 1rem;
+  .hero-img {
+    width: 200px;
+    height: 200px;
   }
 
   .social-links {
-    flex-direction: column; /* Botones verticales */
-    gap: 1rem;
+    justify-content: center;
     width: 100%;
   }
 
   .btn {
-    width: 100%; /* Botones anchos */
-    text-align: center;
+    width: 100%;
+    /* En celular, botones anchos para tocar fácil */
+    max-width: 300px;
+    /* Pero que no sean gigantes */
   }
 }

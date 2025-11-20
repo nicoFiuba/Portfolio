@@ -1,4 +1,5 @@
 import './Footer.css';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 function Footer() {
     const anioActual = new Date().getFullYear(); // Para que el año se actualice solo
@@ -11,10 +12,8 @@ function Footer() {
 
                 <div className="footer-links">
                     {/* Tu LinkedIn Real */}
-                    <a href="https://www.linkedin.com/in/nicol%C3%A1s-feldman/" target="_blank" rel="noreferrer"> LinkedIn</a>
-
-                    {/* GitHub (Lo dejamos genérico hasta que tengas el tuyo listo) */}
-                    <a href="https://github.com/" target="_blank" rel="noreferrer"> GitHub </a>
+                    <a href="https://www.linkedin.com/in/nicol%C3%A1s-feldman/" target="_blank" rel="noreferrer" aria-label="Linkedin"> <FaLinkedin size={24}/> LinkedIn</a>
+                    <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="Github"> <FaGithub size={24}/> GitHub </a>
                 </div>
 
             </div>
